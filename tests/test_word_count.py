@@ -2,6 +2,7 @@
 
 In pytest, each individual test is a python function that starts with `test`.
 """
+
 # Import your library for testing
 from cdstemplate import word_count
 
@@ -36,6 +37,19 @@ def test_tokenize_document():
     ]
 
     assert word_count.tokenize(my_document) == expected_tokens
+
+
+def test_the_p_high():
+    doc = "the the the car baby one two three the the the"
+    c = word_count.CorpusCounter()
+    c.add_doc(doc)
+    p_df = (
+        c.get_counts_as_probability_dataframe()
+        .sort_values("P(W)", ascending=False)
+        .head(1)
+    )
+
+    assert p_df["token"][0] == "the"
 
 
 def test_tokenize_change_pattern():

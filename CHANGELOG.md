@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 You should also add project tags for each release in Github, see [Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
 
+## [2.0.1] - 2024-05-30
+### Added
+- Added new CorpusCounter function
+- CorpusCounter can return dataframe with P(W)
+- Added new test for new function
+- Added new cell to word_count_prototype.ipynb
+
 ## [2.0.0] - 2024-05-29
 ### Added
 - Added example auto-built Sphinx documentation in the `docs` folder
